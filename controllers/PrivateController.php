@@ -56,8 +56,7 @@ class PrivateController extends Controller
                 if (!$model_user->save()) {
                     Yii::$app->session->setFlash('error', 'Can\'t change password');
                     return $this->render('change_profile', [
-                        'model_user' => $model_user,
-                        'model_profile' => $model_profile
+                        'model_user' => $model_user
                     ]);
                 }
             }
@@ -67,8 +66,7 @@ class PrivateController extends Controller
         }
 
         return $this->render('change_profile', [
-            'model_user' => $model_user,
-            'model_profile' => $model_profile
+            'model_user' => $model_user
         ]);
     }
 

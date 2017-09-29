@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="clearfix"></div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="simply_button_group">
-                <?= Html::submitButton($model_user->isNewRecord ? 'Create' : 'Change', ['class' => $model_profile->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                <?= Html::submitButton($model_user->isNewRecord ? 'Create' : 'Change', ['class' => $model_user->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
             </div>
         </div>
         <?php ActiveForm::end(); ?>

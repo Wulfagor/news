@@ -10,7 +10,7 @@ class m170921_200000_create_administrator extends Migration
         $this->insert('user', [
             'id' => 1,
             'username' => 'administrator',
-            'email' => 'szprogr@gmail.com',
+            'email' => 'administrator@szprogr.ru',
             'password_hash' => Password::hash('administrator'),
             'auth_key' => Yii::$app->security->generateRandomString(),
             'confirmed_at' => time(),

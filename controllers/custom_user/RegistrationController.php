@@ -23,7 +23,10 @@ class RegistrationController extends BaseRegistrationController
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['register'],
+                        'actions' => [
+                            'register',
+                            'confirm'
+                        ],
                         'roles' => ['?']
                     ],
                 ]

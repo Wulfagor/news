@@ -109,8 +109,7 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'useFileTransport' => true,
+            'class' => 'yii\swiftmailer\Mailer'
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

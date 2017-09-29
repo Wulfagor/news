@@ -72,9 +72,7 @@ class AdminController extends BaseAdminController
             Yii::$app->getSession()->setFlash('success', Yii::t('user', 'User has been created'));
             $this->trigger(self::EVENT_AFTER_CREATE, $event);
 
-            $auth = Yii::$app->authManager;
-            $role = $auth->getRole('User');
-            $auth->assign($role, $user->id);
+
 
             if (Yii::$app->request->isAjax) {
                 return $this->redirect([
@@ -99,8 +97,10 @@ class AdminController extends BaseAdminController
         }
     }
 
-    public function actionUpdate($type, $id)
+    public function actionUpdate($id)
     {
+        $type = Yii::$app->request->get('type');
+
         $user = $this->findModel($id);
         $user->scenario = 'update';
         $event = $this->getUserEvent($user);

@@ -74,8 +74,7 @@ class NewsController extends Controller
 
         return $this->render('admin', [
             'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-            'role_items' => $role_items
+            'dataProvider' => $dataProvider
         ]);
     }
 
